@@ -8,8 +8,8 @@
 
 <!-- Your Query Goes Here -->
 
-query: {name: "Babelgum"}
-projection: {name: 1, \_id: 0}
+query: `{name: "Babelgum"}`
+projection:`{name: 1, _id: 0}`
 
 <br>
 
@@ -17,17 +17,16 @@ projection: {name: 1, \_id: 0}
 
 <!-- Your Query Goes Here -->
 
-query: {number_of_employees: {$gt: 5000}}
-limit: 20
-
+query: `{number_of_employees: {$gt: 5000}}`
+limit: `20`
 <br>
 
 **3. All the companies founded between 2000 and 2005, both years included. Retrieve only the `name` and `founded_year` fields.**
 
 <!-- Your Query Goes Here -->
 
-query:{$and: [{founded_year: {$gte:2000}},{founded_year:{$lte: 2005}}]}
-projection: {name: 1, founded_year: 1, \_id: 0}
+query: `{$and: [{founded_year: {$gte:2000}},{founded_year:{$lte: 2005}}]}`
+projection: `{name: 1, founded_year: 1, _id: 0}`
 
 <br>
 
@@ -35,8 +34,8 @@ projection: {name: 1, founded_year: 1, \_id: 0}
 
 <!-- Your Query Goes Here -->
 
-query:{founded_year: {$lt: 2010}, "ipo.valuation_amount": {$gt:100000000}}
-projection:{name: 1,ipo: 1,\_id: 0}
+query:`{founded_year: {$lt: 2010}, "ipo.valuation_amount": {$gt:100000000}}`
+projection:`{name: 1,ipo: 1,_id: 0}`
 
 <br>
 
@@ -44,7 +43,7 @@ projection:{name: 1,ipo: 1,\_id: 0}
 
 <!-- Your Query Goes Here -->
 
-query: {partners: {$exists: false}}
+query: `{partners: {$exists: false}}`
 
 <br>
 
@@ -52,7 +51,7 @@ query: {partners: {$exists: false}}
 
 <!-- Your Query Goes Here -->
 
-query: {category_code: {$type: "null"}}
+query: `{category_code: {$type: "null"}}`
 
 <br>
 
@@ -60,7 +59,7 @@ query: {category_code: {$type: "null"}}
 
 <!-- Your Query Goes Here -->
 
-sort: {"ipo.valuation_amount": -1}
+sort: `{"ipo.valuation_amount": -1}`
 
 <br>
 
@@ -68,8 +67,8 @@ sort: {"ipo.valuation_amount": -1}
 
 <!-- Your Query Goes Here -->
 
-sort: {number_of_employees: -1}
-limit: 10
+sort: `{number_of_employees: -1}`
+limit: `10`
 
 <br>
 
@@ -77,8 +76,8 @@ limit: 10
 
 <!-- Your Query Goes Here -->
 
-query: {founded_month: {$gte:7}}
-limit: 1000
+query: `{founded_month: {$gte:7}}`
+limit: `1000`
 
 <br>
 
@@ -86,9 +85,9 @@ limit: 1000
 
 <!-- Your Query Goes Here -->
 
-query: {founded_day: {$lte: 7}}
-sort: {"acquisition.price_amount": -1}
-limit: 10
+query: `{founded_day: {$lte: 7}}`
+sort: `{"acquisition.price_amount": -1}`
+limit: `10`
 
 <br>
 
